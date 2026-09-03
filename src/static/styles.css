@@ -671,4 +671,191 @@ footer {
   text-align: center;
   padding: 15px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.announcement-banner + .announcement-banner {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Generic status message used by modals (login, announcements, etc.) */
+.message {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin: 10px 0;
+}
+
+.message.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.message.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.message.info {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #90caf9;
+}
+
+/* Form groups shared across modals */
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.secondary-button {
+  background-color: var(--border-light);
+  color: var(--text-secondary);
+}
+
+.secondary-button:hover {
+  background-color: var(--border);
+}
+
+/* Announcements management modal */
+.announcements-modal-content {
+  max-width: 520px;
+}
+
+#announcements-modal hr {
+  border: none;
+  border-top: 1px solid var(--border-light);
+  margin: 16px 0;
+}
+
+#announcements-list-container {
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+#announcements-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.announcement-item {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: var(--surface);
+}
+
+.announcement-item-message {
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.announcement-item-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.announcement-item-dates {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.announcement-status-badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.announcement-status-badge.active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.announcement-status-badge.scheduled {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.announcement-status-badge.expired {
+  background-color: #f5f5f5;
+  color: #757575;
+}
+
+.announcement-item-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.announcement-item-actions button {
+  padding: 3px 10px;
+  font-size: 0.75rem;
+}
+
+#announcements-empty-state {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  padding: 10px 0;
 }
